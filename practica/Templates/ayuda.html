@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+
+
+{% block autentication%}
+	{{user|safe}}
+{% endblock %}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+	  <li><a href="/">Revistas</a></li>
+	  <li><a href="/canales">Canales</a></li>
+	  <li><a href="/new_user">Crear Usuario</a></li>
+	</ul>
+{% endblock%}
+
+{% block title %}
+<h1 class="title">Ayuda</h1>
+{% endblock %}
+
+{% block content %}
+	<p>
+	Asignatura: Servicios y aplicaciones telematicas
+	<br></br>
+	Nombre: Itziar Polo Martinez
+	<br></br>
+	User-lab: itziar
+	<br></br>
+	user-password:
+		marta-marta
+		pepe-pepe
+		itziar-1234
+	<br></br>
+	Canales disponibles:
+
+	<br></br>
+	Resumen de las peculiaridades:
+	<br></br>
+		Creo que las peculiaridades que puede tener mi aplicación son:
+		<br></br>
+			-Siempre que esté registrado puede cambiar tanto su nombre de revista como el css correspondiente
+			<br></br>
+			-Puedo ir de un sitio a otro sin saber de memoria cuál es la url correspondiente<br></br>
+			-Si un usuario tiene 10 noticias y selecciona una más, si borra una cualquiera tendrá 10 noticias ya que no las borro si el usuario no quiere<br></br>
+			-Título en 3D
+	<br></br>
+	Lista de funciones optativas:<br></br>
+		-Crear usuarios<br></br>
+		-Comentarios a las revistas de usuario<br></br>
+		-Contador de visitas cada vez que se entra a esa revista<br></br>
+		-Borrar noticias<br></br>
+		-Borrar canales<br></br>
+		-RSS de la página principal<br></br>
+		-Favicon<br></br>
+	Url parte basica:
+	<a href="http://www.google.es/"> Parte Basica </a><br></br>
+<br></br>
+	Url parte opcional:
+	<a href="http://www.google.com">Parte Opcional </a><br></br>
+	</p>
+{% endblock %}

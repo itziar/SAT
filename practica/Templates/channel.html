@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+
+{% block autentication%}
+	{{user|safe}}
+{% endblock %}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+	  <li><a href="/">Revistas</a></li>
+	  <li><a href="/ayuda">Ayuda</a></li>
+	  <li><a href="/nombre_revista">Nombre de la revista</a></li>
+	  <li><a href="/css">CSS</a></li>
+	</ul>
+{% endblock%}
+
+{%block title%}
+	{% if new_channel %}
+		<form method="post" action="">{% csrf_token %}
+		<tr><td>Url</td>
+			<input type="text" name="URL" value="" id="URL">
+		<input type="submit" value="añadir" />
+
+		</form>
+	{% endif %}
+{% endblock%}
+
+
+{% block content %}
+	{{content|safe}}
+{% endblock %}

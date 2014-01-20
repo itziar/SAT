@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+
+{% block autentication%}
+	{{user|safe}}
+{% endblock %}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+      <li><a href="/">Revistas</a></li>
+	  <li><a href="/ayuda">Ayuda</a></li>
+	  <li><a href="/canales">Canales</a></li>
+	</ul>
+{% endblock%}
+
+{% block title %}
+	<h1 class="title">{{revista}}</h1>
+{% endblock %}
+
+{% block content %}
+	{{content|safe}}
+	
+	<form method="post" action="">{% csrf_token %}
+		Nombre
+			<input type="text" name="nombre" value="" id="nombre"><br></br>
+		<textarea name="comentario" value="" id="comentario" rows="10" cols="40">Escribe aquí tu comentario</textarea>
+		<br></br>
+		<input type="submit" value="comentar" />
+	
+{% endblock %}

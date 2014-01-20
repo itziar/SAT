@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+
+{% block autentication%}
+	{{user|safe}}
+{% endblock %}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+	  <li><a href="/ayuda">Ayuda</a></li>
+	  <li><a href="canales">Canales</a></li>
+	  <li><a href="/nombre_revista">Nombre de la revista</a></li>
+	  <li><a href="/css">CSS</a></li>
+	</ul>
+{% endblock%}
+
+{% block title %}
+<a href="/rss"><img src="/images/rss.jpg" with=200 height=52></a>
+
+<h1 class="title">Welcome to MiRevista</h1>
+{% endblock %}
+
+{% block content %}
+	{{content|safe}}
+{% endblock %}

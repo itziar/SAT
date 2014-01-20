@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+
+{% block autentication%}
+	
+	{{user|safe}}
+{% endblock %}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+		<li><a href="/">Revistas</a></li>
+		<li><a href="/ayuda">Ayuda</a></li>
+		<li><a href="/canales">Canales</a></li>
+		<li><a href="/new_user">Crear Usuario</a></li>
+	</ul>
+{% endblock%}
+
+{% block title %}
+<h1 class="title">{{revista}}</h1>
+{% endblock %}
+
+{% block content %}
+	<div class="img"><img src="/images/not-found-404-try-again.png" alt="" height="400" width="100%"></div>
+{% endblock %}

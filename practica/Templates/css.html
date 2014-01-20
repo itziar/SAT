@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+
+{% block autentication%}
+	
+	{{usuario|safe}}
+{% endblock %}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+		<li><a href="/">Revistas</a></li>
+		<li><a href="/ayuda">Ayuda</a></li>
+		<li><a href="/canales">Canales</a></li>
+		<li><a href="/nombre_revista">Nombre de la revista</a></li>
+		<li><a href="/new_user">Crear Usuario</a></li>
+	</ul>
+{% endblock%}
+
+{% block title %}
+<h1 class="title">{{revista}}</h1>
+{% endblock %}
+
+{% block content %}
+	<h3><a href="http://www.w3schools.com/cssref/css_colornames.asp">Colores </a></h3><br></br>
+	<form method="post" action="">{% csrf_token %}
+		<tr><td>Color de fondo</td>
+			<input type="text" name="back_color" value="" id="back_color">
+		<input type="submit" value="cambiar" /></td></tr><br></br>
+		<tr><td>Left panel color</td>
+			<input type="text" name="left_color" value="" id="left_color">
+		<input type="submit" value="cambiar" /></td></tr><br></br>
+		<tr><td>Left panel color de fondo</td>
+			<input type="text" name="left_back" value="" id="left_back">
+		<input type="submit" value="cambiar" /></td></tr><br></br>
+		<tr><td>Rigth panel color</td>
+			<input type="text" name="rigth_color" value="" id="rigth_color">
+		<input type="submit" value="cambiar" /></td></tr><br></br>
+		<tr><td>Rigth panel color de fondo</td>
+			<input type="text" name="rigth_back" value="" id="rigth_back">
+		<input type="submit" value="cambiar" /></td></tr><br></br>
+		</form>
+{% endblock %}

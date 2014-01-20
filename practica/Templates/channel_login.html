@@ -1,0 +1,26 @@
+{% extends 'channel.html' %}
+
+
+{%block autentication%}
+<form method="post" action="">{% csrf_token %}
+
+{% csrf_token %}
+	<tr><td>Username</td>
+		<input type="text" name="username" value="" id="username">
+	<tr><td>Password</td>
+		<input type="password" name="password" value="" id="password">
+
+<input type="submit" value="login" />
+
+</form>
+
+{%endblock%}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+	  <li><a href="/">Revistas</a></li>
+	  <li><a href="/ayuda">Ayuda</a></li>
+	  <li><a href="/new_user">Crear Usuario</a></li>
+	</ul>
+{% endblock%}

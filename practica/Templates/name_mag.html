@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+
+{% block autentication%}
+	
+	{{usuario|safe}}
+{% endblock %}
+
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+	  <li><a href="/">Revistas</a></li>
+	  <li><a href="/ayuda">Ayuda</a></li>
+	  <li><a href="/css">Css</a></li>
+	  <li><a href=/{{user}}>Revista de usuario</a></li>
+	</ul>
+{% endblock%}
+
+{% block title %}
+<h1 class="title">{{revista}}</h1>
+{% endblock %}
+
+{% block content %}
+	<form method="post" action="">{% csrf_token %}
+	<tr><td>Nombre de la revista</td>
+	<input type="text" name="revista" value="" id="revista">
+		<input type="submit" value="cambiar" />
+{% endblock %}

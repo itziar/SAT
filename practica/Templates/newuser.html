@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block title %}
+<h1>Registra un nuevo usuario</h1>
+{% endblock %}
+{% block menu %}
+	<h2>Menu</h2>
+	<ul>
+		<li><a href="/">Revistas</a></li>
+		<li><a href="ayuda">Ayuda</a></li>
+		<li><a href="canales">Canales</a></li>
+	</ul>
+{% endblock%}
+{% block content %}
+	<form id='formulario' method='post' action =''> {% csrf_token %}
+		<table>{{formulario|safe}}</table>
+		<p><input type='submit' value='Registrar'/> </p>
+	</form>
+{% endblock %}
